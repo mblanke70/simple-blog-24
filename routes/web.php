@@ -24,8 +24,11 @@ Route::get('/', function () {
     return view('home', ['posts' => $posts] );
 });
 
-Route::get('/post', function () {
-    return view('post');
+Route::get('/post/{id}', function ($id) {
+    //dd($id);
+    $post = Post::find($id);
+    //dd($post);
+    return view('post', ['post' => $post]);
 });
 
 /*
