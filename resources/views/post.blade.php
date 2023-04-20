@@ -2,16 +2,16 @@
     
     <article class="max-w-4xl mx-auto lg:grid lg:grid-cols-12 gap-x-10">
         <div class="col-span-4 lg:text-center lg:pt-14 mb-10">
-            <img src="../images/{{ $post->image }}" alt="" class="rounded-xl">
-            
+            <img src="{{ url('images/'.$post->image) }}" alt="" class="rounded-xl">
+
             <p class="mt-4 block text-gray-400 text-xs">
                 Published <time>1 day ago</time>
             </p>
 
             <div class="flex items-center lg:justify-center text-sm mt-4">
-                <img src="../images/lary-avatar.svg" alt="Lary avatar">
+                <img src="{{ url('images/lary-avatar.svg') }}" alt="Lary avatar">
                 <div class="ml-3 text-left">
-                    <h5 class="font-bold"> {{ $post->author }}</h5>
+                    <h5 class="font-bold">{{ $post->author }}</h5>
                     <h6>Mascot at Laracasts</h6>
                 </div>
             </div>
@@ -19,7 +19,7 @@
 
         <div class="col-span-8">
             <div class="hidden lg:flex justify-between mb-6">
-                <a href="#"
+                <a href="{{ url('/') }}"
                     class="transition-colors duration-300 relative inline-flex items-center text-lg hover:text-blue-500">
                     <svg width="22" height="22" viewBox="0 0 22 22" class="mr-2">
                         <g fill="none" fill-rule="evenodd">
@@ -50,7 +50,7 @@
 
             <div class="space-y-4 lg:text-lg leading-loose">
                 <p>{{ $post->head }}</p>
-                
+
                 <p>{{ $post->body }}</p>
 
                 <!--
