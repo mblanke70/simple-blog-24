@@ -67,21 +67,16 @@
 
     <x-post leading="1" :post="$posts[0]" />
 
-
     <div class="lg:grid lg:grid-cols-2">
-        
         @for ($i = 1; $i < 3; $i++)
             <x-post leading="0" :post="$posts[$i]" />
         @endfor
-
     </div>
 
     <div class="lg:grid lg:grid-cols-3">
-
         @for ($i = 3; $i < 6; $i++)
             <x-post leading="0" :post="$posts[$i]" />
         @endfor
-        
     </div>
 
 </x-app-layout>
